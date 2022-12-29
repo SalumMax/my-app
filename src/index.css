@@ -26,4 +26,19 @@ body {
 
 .quiz {
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.quiz-answer {
+  border: 1px solid black;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-left: 15px;
+}
+.answers {
+  display: flex;
+  justify-content: space-between;
 }
