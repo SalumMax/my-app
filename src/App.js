@@ -44,7 +44,9 @@ export default function App() {
         .replace(/(&rdquo;)/g, '"')
         .replace(/(&ldquo;)/g, '"')
         .replace(/(&#039;)/g, "'")
-        .replace(/(&amp;)/g, '&');
+        .replace(/(&amp;)/g, '&')
+        .replace(/(&gt;)/g, '>')
+        .replace(/(&lt;)/g, '<');
     }
     fetch(api)
       .then((res) => res.json())
