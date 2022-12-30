@@ -19,20 +19,25 @@ export default function App() {
   const quizOptions = categoryList.trivia_categories;
   const api = `https://opentdb.com/api.php?amount=${quizNumber}&category=${category}&difficulty=medium&type=multiple`;
 
+  // start quiz
   function startQuiz() {
     setStart((prevState) => !prevState);
   }
-
+  //selecting category of the quiz
   function SelectCategory(e) {
     const value = e.target.value;
     setCategory(value);
   }
+
+  //selecting number of questions in the quiz
   function selectQuizNumber(e) {
     const value = e.target.value;
     setQuizNumber(value);
   }
 
+  //fetching quiz data from the API and putting it in the state in the required format
   useEffect(() => {
+    // fixing encoding issues in the fetched data
     function normalise(str) {
       return str
         .replace(/(&quot;)/g, '"')
@@ -103,8 +108,8 @@ export default function App() {
   function countResults() {
     const isSelectedArr = [];
     quizData.map((element) =>
-      element.answerOption.forEach((option) => {
-        if (option.isSelected && option.isCorrect) {
+      element.answers.forEach((option) => {
+        if (option.isClicked && option.isCorrect) {
           isSelectedArr.push(option);
         }
         setCount(isSelectedArr.length);
@@ -129,6 +134,7 @@ export default function App() {
         question={element.question}
         answers={element.answers}
         isClicked={isClicked}
+        results={results}
         selectAnswer={(id) => selectAnswer(element.id, id)}
       />
     );

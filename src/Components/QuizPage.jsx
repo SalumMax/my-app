@@ -22,7 +22,7 @@ export default function QuizPage(props) {
             } else if (props.results && answer.isCorrect) {
               return 1;
             } else {
-              return 0.75;
+              return 0.5;
             }
           }
 
