@@ -59,7 +59,7 @@ h3 {
     rgb(185, 111, 220) 100%
   );
   color: #f8f3f3;
-  width: 200px;
+  width: 205px;
   height: 50px;
   margin-top: 40px;
   border-radius: 10px;
@@ -99,16 +99,18 @@ h3 {
 
 select {
   background-color: #e9edf1;
-  font-size: 12px;
+  color: #0c0c0c;
+  font-size: 12.5px;
   text-align: center;
-  width: 150px;
+  width: 205px;
   height: 50px;
   margin-bottom: 10px;
   padding: 10px 15px;
   border: none;
   outline: none;
-  padding: 10px 15px;
+  padding: 8px 10px;
   border-radius: 10px;
+  text-transform: uppercase;
   z-index: 1;
 }
 .answers {

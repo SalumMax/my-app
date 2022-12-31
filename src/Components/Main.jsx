@@ -6,8 +6,7 @@ function Main(props) {
       <h1>QUIZZICAL</h1>
       <select id='quiz-numbers' onChange={props.selectQuizNumber}>
         <option disabled selected>
-          {' '}
-          Select number of questions{' '}
+          Number of questions
         </option>
         <option value='5'> 5 </option>
         <option value='6'> 6 </option>
