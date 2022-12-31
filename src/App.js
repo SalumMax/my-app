@@ -151,10 +151,10 @@ export default function App() {
       {!start && <StartGameButton startQuiz={startQuiz} start='Start Quiz' />}
       {start && questions}
       {start && !results && <ShowResults countResults={countResults} />}
-      {start && results && <PlayAgain startQuiz={playAgain} />}
       {start && results && (
         <Count countAnswers={count} countLength={quizData.length} />
       )}
+      {start && results && <PlayAgain startQuiz={playAgain} />}
     </div>
   );
 }

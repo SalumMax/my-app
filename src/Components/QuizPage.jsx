@@ -3,16 +3,17 @@ import React from 'react';
 export default function QuizPage(props) {
   return (
     <div className='quiz'>
-      <h3 className='quiz-question'>{props.question}</h3>
+      <h2 className='quiz-question'>{props.question}</h2>
       <div className='answers'>
         {props.answers.map((answer) => {
           function myColor() {
             if (answer.isClicked) {
-              return '#CBC3E3';
+              return "linear-gradient(45deg, rgba(140,80,191,0.9738489145658263) 0%, rgba(35,162,204,1) 100%)";
+              
             } else if (props.results && answer.isCorrect) {
-              return '#90EE90';
+              return 'linear-gradient(45deg, rgba(80,191,183,0.9738489145658263) 0%, rgba(35,204,98,1) 100%)';
             } else {
-              return 'white';
+              return 'linear-gradient(45deg, rgba(225,238,235,0.9738489145658263) 0%, rgba(194,209,200,1) 100%)';
             }
           }
 
@@ -21,8 +22,10 @@ export default function QuizPage(props) {
               return 1;
             } else if (props.results && answer.isCorrect) {
               return 1;
+            } else if (!answer.isClicked) {
+              return 0.75;
             } else {
-              return 0.5;
+              return 1;
             }
           }
 
@@ -35,11 +38,21 @@ export default function QuizPage(props) {
               return 1;
             }
           }
+          function myFontColor() {
+            if (answer.isClicked) {
+              return '#ffffff';
+            } else if (props.results && answer.isCorrect) {
+              return '#000000';
+            } else {
+              return '#000000';
+            }
+          }
 
           const styles = {
-            backgroundColor: myColor(),
+            backgroundImage: myColor(),
             opacity: myOpacity(),
             scale: myScale(),
+            color: myFontColor(),
           };
           return (
             <p
