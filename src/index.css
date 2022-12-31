@@ -42,6 +42,7 @@ h3 {
     rgb(185, 111, 220) 100%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0.3px rgb(148, 76, 195);
 }
@@ -50,8 +51,6 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* margin-top: 50px; */
-  height: 100vh;
 }
 .btn {
   background-image: linear-gradient(
@@ -89,12 +88,8 @@ h3 {
   align-items: center;
   max-width: 700px;
 }
-/* .quiz-question:nth-child() {
-  margin-top: 25px;
-} */
 
 .quiz-answer {
-  /* border: 1px solid black; */
   min-width: 150px;
   text-align: center;
   padding: 10px 15px;
@@ -109,10 +104,7 @@ select {
   width: 150px;
   height: 50px;
   margin-bottom: 10px;
-  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
   padding: 10px 15px;
-  /* border-bottom: solid 2px rgb(151, 147, 151); */
   border: none;
   outline: none;
   padding: 10px 15px;
@@ -125,9 +117,7 @@ select {
 }
 
 .answers p {
-  /* border: solid 1px black; */
   min-width: 200px;
-  max-width: 350px;
   height: auto;
   border-radius: 10px;
   text-align: center;
@@ -146,24 +136,11 @@ select {
   box-shadow: 2px 3px 5px #6d028e;
   transition: all 0.4s;
 }
-/* #quiz-category {
-  background-color: #e9edf1;
-  font-size: 12px;
-  width: 200px;
-  height: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  padding: 10px 10px;
-  border: solid 2px rgb(151, 147, 151);
-  padding: 10px 15px;
-  border-radius: 10px;
-  z-index: 1;
-} */
 
 @media only screen and (max-width: 500px) {
   .quiz,
   .btn,
-  .main {
+  select {
     transform: scale(0.55);
   }
 }
@@ -171,7 +148,7 @@ select {
 @media only screen and (max-width: 700px) {
   .quiz,
   .btn,
-  .main {
+  select {
     transform: scale(0.65);
   }
   .answers {
@@ -186,7 +163,7 @@ select {
 @media only screen and (max-width: 978px) {
   .quiz,
   .btn,
-  .main {
+  select {
     transform: scale(0.85);
   }
 }
