@@ -9,7 +9,7 @@ body {
   );
   background-size: cover;
   background-repeat: no-repeat;
-  height: 320vh;
+  height: 280vh;
 }
 h1 {
   font-size: 55px;
@@ -58,7 +58,7 @@ h3 {
     rgba(158, 189, 218, 0.974) 0%,
     rgb(185, 111, 220) 100%
   );
-  color: #f8f3f3;
+  color: #191717;
   width: 205px;
   height: 50px;
   margin-top: 40px;
@@ -87,6 +87,9 @@ h3 {
   justify-items: center;
   align-items: center;
   max-width: 700px;
+}
+.quiz:first-child{
+  margin-top: 20px;
 }
 
 .quiz-answer {
@@ -146,7 +149,7 @@ select {
     transform: scale(0.55);
   }
   body {
-    height: 1200vh;
+    height: 1000vh;
   }
 }
 
