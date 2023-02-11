@@ -24,10 +24,10 @@ export default function App() {
     setStart((prevState) => !prevState);
   }
   //selecting category of the quiz
-  function SelectCategory(e) {
-    const value = e.target.value;
-    setCategory(value);
-  }
+  // function selectCategory(e) {
+  //   const value = e.target.value;
+  //   setCategory(value);
+  // }
 
   //selecting number of questions in the quiz
   function selectQuizNumber(e) {
@@ -146,7 +146,10 @@ export default function App() {
     <div className='App'>
       {!start && <Main selectQuizNumber={selectQuizNumber} />}
       {!start && (
-        <QuizList selectCategory={SelectCategory} quizOptions={quizOptions} />
+        <QuizList
+          selectCategory={(e) => setCategory(e.target.value)}
+          quizOptions={quizOptions}
+        />
       )}
       {!start && <StartGameButton startQuiz={startQuiz} start='Start Quiz' />}
       {start && questions}
