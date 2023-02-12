@@ -58,7 +58,7 @@ h3 {
     rgba(158, 189, 218, 0.974) 0%,
     rgb(185, 111, 220) 100%
   );
-  color: #191717;
+  color: #efecec;
   width: 205px;
   height: 50px;
   margin-top: 40px;
@@ -101,9 +101,15 @@ h3 {
 }
 
 select {
-  background-color: #e9edf1;
-  color: #0c0c0c;
-  font-size: 12.5px;
+  background-image: linear-gradient(
+    75deg,
+    rgba(158, 189, 218, 0.974) 0%,
+    rgb(185, 111, 220) 100%
+  );
+  color: #eedede;
+  /* background-color: #e9edf1;
+  color: #0c0c0c; */
+  font-size: 13.5px;
   text-align: center;
   width: 205px;
   height: 50px;
@@ -115,6 +121,9 @@ select {
   border-radius: 10px;
   text-transform: uppercase;
   z-index: 1;
+}
+option:hover{
+  background-image: linear-gradient(45deg, rgba(80,191,183,0.9738489145658263) 0%, rgba(35,204,98,1) 100%);
 }
 .answers {
   display: flex;

@@ -5,7 +5,7 @@ export default function QuizList(props) {
     <div>
       <select id='quiz-category' onChange={props.selectCategory}>
         <option disabled selected>
-          Category
+          Quiz Category
         </option>
         {props.quizOptions.map((option) => {
           return <option value={option.id}>{option.name}</option>;

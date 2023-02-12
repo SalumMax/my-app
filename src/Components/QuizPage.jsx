@@ -8,12 +8,12 @@ export default function QuizPage(props) {
         {props.answers.map((answer) => {
           function myColor() {
             if (answer.isClicked) {
-              return "linear-gradient(45deg, rgba(140,80,191,0.9738489145658263) 0%, rgba(35,162,204,1) 100%)";
+              return "linear-gradient(45deg, rgba(140,80,191,0.97) 0%, rgba(35,162,204,1) 100%)";
               
             } else if (props.results && answer.isCorrect) {
-              return 'linear-gradient(45deg, rgba(80,191,183,0.9738489145658263) 0%, rgba(35,204,98,1) 100%)';
+              return 'linear-gradient(45deg, rgba(80,191,183,0.97) 0%, rgba(35,204,98,1) 100%)';
             } else {
-              return 'linear-gradient(45deg, rgba(225,238,235,0.9738489145658263) 0%, rgba(194,209,200,1) 100%)';
+              return 'linear-gradient(45deg, rgba(225,238,235,0.97) 0%, rgba(194,209,200,1) 100%)';
             }
           }
 
