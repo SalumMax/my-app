@@ -159,7 +159,8 @@ export default function App() {
       {start && results && (
         <Count countAnswers={count} countLength={quizData.length} />
       )}
-       {count === 5 && <Confetti/>}
+      {/* launch confetti if num of correct questions  === num of quiz questions */}
+       {count === quizData.length && <Confetti/>} 
       {start && results && <PlayAgain startQuiz={playAgain} />}
     </div>
   );
