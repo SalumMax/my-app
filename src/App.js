@@ -7,6 +7,8 @@ import Count from './Components/Count';
 import PlayAgain from './Components/Buttons/PlayAgainButton';
 import ShowResults from './Components/Buttons/ShowResultsButton';
 import categoryList from './Components/QuizCategoriesList';
+// import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
 import { nanoid } from 'nanoid';
 
 export default function App() {
@@ -157,6 +159,7 @@ export default function App() {
       {start && results && (
         <Count countAnswers={count} countLength={quizData.length} />
       )}
+       {count === 5 && <Confetti/>}
       {start && results && <PlayAgain startQuiz={playAgain} />}
     </div>
   );
